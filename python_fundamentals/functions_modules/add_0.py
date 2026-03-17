@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Import add function and print the result of 1 + 2."""
 
 
 from add_0 import add
