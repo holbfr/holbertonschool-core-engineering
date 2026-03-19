@@ -7,4 +7,10 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-print_matrix_integer(matrix)
+
+m = [[]]
+# print_matrix_integer(matrix)
+
+# print("\n ------- \n")
+
+print_matrix_integer(m)
