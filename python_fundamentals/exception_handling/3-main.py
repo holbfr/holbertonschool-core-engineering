@@ -14,3 +14,5 @@ safe_print_division(10, 10)
 safe_print_division(5, 0)
 
 safe_print_division(22, -2)
+
+safe_print_division(0, 0)
