@@ -3,5 +3,5 @@
 
 from safe_print_integer import safe_print_integer
 
-value = '93'
+value = None
 print(safe_print_integer(value))
