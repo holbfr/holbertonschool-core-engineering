@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
+safe_print_list = __import__('safe_print_list').safe_print_list
 
+my_list = [1, 2, 3, 4, 5]
 
-from safe_print_list import safe_print_list
-
-
-mylist = [1, 2, 3, 4]
-x = len(mylist)
-safe_print_list(mylist, x)
+nb_print = safe_print_list(my_list, 2)
+print(f"elements: {nb_print}")
