@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
+safe_print_division = __import__('safe_print_division').safe_print_division
 
-from safe_print_division import safe_print_division
+a = 12
+b = 2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
 
-
-safe_print_division(10, 5)
-
-safe_print_division(6, 3)
-
-safe_print_division(5, 1)
-
-safe_print_division(10, 10)
-
-safe_print_division(5, 0)
-
-safe_print_division(22, -2)
-
-safe_print_division(0, 0)
+a = 12
+b = 0
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
