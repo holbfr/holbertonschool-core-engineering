@@ -18,8 +18,8 @@ class Rectangle(BaseGeometry):
 
     def __repr__(self):
         """String to display of the Rectangle"""
-        print("[Rectangle] {}/{}".format(self.__width, self.__height))
+        print("[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height))
 
     def __str__(self):
         """String representation of the Rectangle"""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return "[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height)
