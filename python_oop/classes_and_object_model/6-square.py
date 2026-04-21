@@ -43,11 +43,12 @@ class Square:
         """String representation of Square instance"""
         string_repr = ''
         if self.size > 0:
-            string_repr += "\n" * self.position[1]
+            string_repr += '\n' * self.position[1]
             for i in range(self.size):
                 string_repr += ' ' * self.position[0]
                 string_repr += self.size * '#'
-                string_repr += '\n'
+                if i < self.size - 1:
+                    string_repr += '\n'
         return string_repr
 
     @property
