@@ -7,9 +7,10 @@ Simple module containing a Square class definition
 class Square:
     """ Simple Square class definition """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """ Square class constructor"""
-        self.__size = size
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -33,9 +34,36 @@ class Square:
         if self.size == 0:
             print()
         else:
+            print("\n" * self.position[1])
             for i in range(self.size):
+                print(' ' * self.position[0], end='')
                 print(self.size * '#')
 
     def __str__(self):
         """String representation of Square instance"""
-        self.my_print()
+        string_repr = ''
+        if self.size > 0:
+            string_repr += "\n" * self.position[1]
+            for i in range(self.size):
+                string_repr += ' ' * self.position[0]
+                string_repr += self.size * '#'
+                string_repr += '\n'
+        return string_repr
+
+    @property
+    def position(self):
+        """"Position attribute value getter"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """"Position attribute value setter"""
+        is_valid_tuple = (
+            isinstance(value, tuple)
+            and len(value) == 2
+            and all(isinstance(item, int) and item >= 0 for item in value)
+        )
+        if not is_valid_tuple:
+            raise TypeError("position must be a tuple of 2 positive integer")
+        else:
+            self.__position = value
