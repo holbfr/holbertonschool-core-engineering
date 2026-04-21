@@ -2,7 +2,7 @@
 """
 Module containing the Rectangle class definition
 """
-from base_geometry import BaseGeometry
+BaseGeometry = __import__('base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
