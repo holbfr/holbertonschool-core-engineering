@@ -30,14 +30,19 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square to the stdout"""
-        if self.size == 0:
+        """Prints in stdout the square with the character #."""
+        if self.__size == 0:
             print()
         else:
-            print("\n" * self.position[1])
-            for i in range(self.size):
-                print(' ' * self.position[0], end='')
-                print(self.size * '#')
+            if self.__position[1] > 0:
+                for ln in range(self.position[1]):
+                    print()
+            for i in range(self.__size):
+                for i in range(self.__position[0]):
+                    print(" ", end="")
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
 
     def __str__(self):
         """String representation of Square instance"""
