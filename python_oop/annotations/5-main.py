@@ -5,3 +5,5 @@ from user import User
 user = User("Alice", 30)
 print(user.name)  # Alice
 print(user.age)   # 30
+
+print(User.__init__.__annotations__)
