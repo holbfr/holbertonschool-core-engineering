@@ -8,5 +8,5 @@ class User():
     """User class definition"""
     def __init__(self, name: str, age: int) -> None:
         """User class constructor"""
-        self.name = name
-        self.age = age
+        self.name: str = name
+        self.age: int = age
