@@ -1,4 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+
 """
 An async connection_handler(websocket) that, for each text message received
 on that connection, sends back one outgoing text message whose value is
