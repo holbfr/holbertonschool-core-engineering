@@ -21,7 +21,6 @@ websockets ws://localhost:8765/
 """
 
 import asyncio
-# from websockets import serve
 from websockets.asyncio.server import serve
 
 
