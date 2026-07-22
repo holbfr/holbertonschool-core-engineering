@@ -1,18 +1,20 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/env python
 import asyncio
 from websockets.asyncio.client import connect
 
 
 async def connect_and_send(uri: str, text: str) -> str:
     async with connect(uri) as websocket:
-        user_msg = "Hello WebSocket"
-        server_resp = await websocket.send(user_msg)
-        await websocket.recv()
-        print(text, end="")
-    return text.strip()
+        await websocket.send(text)
+        server_response = await websocket.recv()
+        return server_response
+
+
+async def main():
+    uri = "ws://localhost:8765"
+    response = await connect_and_send(uri=uri, text="demo")
+    print(response, end="")
 
 
 if __name__ == "__main__":
-    uri = "ws://localhost:8765"
-    asyncio.run(connect_and_send(uri=uri, text="demo"))
+    asyncio.run(main())
