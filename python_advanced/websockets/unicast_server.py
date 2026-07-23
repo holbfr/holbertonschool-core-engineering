@@ -28,7 +28,7 @@ async def connection_handler(websocket):
         # for k,v in websocket.__dict__.items():
         #     print(f"{k}: {v}")
         # print(websocket.__dict__['id'])
-        connection_obj = websocket.__dict__['id']
+        connection_obj = websocket
         connected_clients.add(connection_obj)
         message = await websocket.recv()
         message = message.strip()
